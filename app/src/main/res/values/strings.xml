@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">过期提醒</string>
+    <string name="format_remain_days">还剩%1$d天</string>
+    <string name="format_count">数量：%1$d</string>
+    <string name="format_expired">已过期%1$d天</string>
+    <string name="format_notify_expired">有%1$d件物品已经过期,</string>
+    <string name="format_notify_will_expired">有%1$d件物品即将过期,</string>
+    <string name="format_notify_end">点击查看详情</string>
+    <string name="expire_tips">过期请注意：</string>
+    <string name="confirm">确认</string>
+    <string name="add">添加</string>
+    <string name="update">更新</string>
+    <string name="delete">删除</string>
+    <string name="cancel">取消</string>
+    <string name="default_date_time_format">"yyyy年MM月dd日 HH:mm"</string>
+    <string name="is_confirm_delete_record">确认要删除如下记录吗？</string>
+</resources>
