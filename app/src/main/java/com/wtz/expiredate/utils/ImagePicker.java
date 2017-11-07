@@ -36,7 +36,7 @@ public class ImagePicker {
                 // 对目标应用临时授权该Uri所代表的文件
                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 // 通过FileProvider创建一个content类型的Uri
-                uri = FileProvider.getUriForFile(launcher.getApplicationContext(), "com.test.qrcodetool.fileprovider", target);
+                uri = FileProvider.getUriForFile(launcher.getApplicationContext(), "com.wtz.expiredate.fileprovider", target);
             } else {
                 uri = Uri.fromFile(target);
             }
