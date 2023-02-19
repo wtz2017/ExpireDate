@@ -9,7 +9,6 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -18,16 +17,14 @@ android {
         }
     }
     useLibrary 'org.apache.http.legacy'
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:support-v4:26.0.0-alpha1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    testCompile 'junit:junit:4.12'
-    compile 'org.apache.httpcomponents:httpmime:4.2.1'
-    compile 'com.squareup.picasso:picasso:2.3.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:26.0.0-alpha1'
+    implementation 'org.apache.httpcomponents:httpmime:4.5.6'
+    implementation 'com.squareup.picasso:picasso:2.3.2'
 }

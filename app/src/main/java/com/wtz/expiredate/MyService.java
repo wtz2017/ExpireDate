@@ -46,11 +46,13 @@ public class MyService extends Service {
         List<GoodsItem> list = new DatabaseHelper(this).queryList();
         int countExpired = 0;
         int countWillExpired = 0;
-        for (GoodsItem item : list) {
-            if (item.isExpired()) {
-                countExpired++;
-            } else if (item.isWillExpired()) {
-                countWillExpired++;
+        if (list != null && !list.isEmpty()) {
+            for (GoodsItem item : list) {
+                if (item.isExpired()) {
+                    countExpired++;
+                } else if (item.isWillExpired()) {
+                    countWillExpired++;
+                }
             }
         }
         Log.d(TAG, "has expired item: " + countExpired);
